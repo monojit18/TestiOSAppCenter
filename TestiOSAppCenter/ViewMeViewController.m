@@ -7,6 +7,9 @@
 //
 
 #import "ViewMeViewController.h"
+@import AppCenter;
+@import AppCenterAnalytics;
+@import AppCenterCrashes;
 
 @interface ViewMeViewController ()
 
@@ -31,6 +34,7 @@
 {
     
     [self dismissViewControllerAnimated:YES completion:nil];
+    [MSAnalytics trackEvent:@"Done clicked from iOS" withProperties:@{@"test":@"done click"}];
     
 }
 

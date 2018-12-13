@@ -31,6 +31,8 @@
     
     NSString *pClickMeString = self.ClickMeButton.titleLabel.text;
     self.ClickMeTextField.text = pClickMeString;
+    [MSAnalytics trackEvent:@"ClickMe clicked from iOS" withProperties:@{@"test":@"clickme click"}];
+    // [MSCrashes generateTestCrash];
     
 }
 
@@ -44,6 +46,7 @@
     pViewMeViewController.ViewMeString = self.ClickMeTextField.text;
     
     [self presentViewController:pViewMeViewController animated:YES completion:nil];
+    [MSAnalytics trackEvent:@"VieMe clicked from iOS" withProperties:@{@"test":@"viewme click"}];
     
 }
 
