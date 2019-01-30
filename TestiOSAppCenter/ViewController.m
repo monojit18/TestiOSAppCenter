@@ -33,7 +33,7 @@
     self.ClickMeTextField.text = pClickMeString;
     [MSAnalytics trackEvent:@"ClickMe clicked from iOS" withProperties:@{@"test":@"clickme click"}];
     // [MSCrashes generateTestCrash];
-    // comments
+    
 }
 
 - (IBAction)onViewMe:(id)sender
